@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title></title>
+</head>
+<body>
+<p>Призвіще<input id="im" type="text"></p>
+<p>Ім'я<input type="text"></p>
+<p>По-батькові<input type="text"></p>
+<p>Cтать</p>
+	<input type="radio" name="choise" checked>Ж
+	<input type="radio" name="choise" checked>Ч
+<p><input type="checkbox" checked>Комерційник</p>
+<p>Ваше фото<input type="file"></p>
+<p>Оцінка з Математики</p><input id="math" type="number" value="" required ><p>
+	<p>Оцінка з Мови</p><input type="number" id="mova" value="" required ><p>
+	<input type="button" value="Click" onclick="someFunc()">
+	<input type="button" value="Click2" onclick="someFunc2()">
+	<script type="text/javascript">
+		function someFunc(){
+			Win = window.open("about:blank","exemple",'width=800,height=600,top=30,left=300');
+			var elem = document.getElementById("im").value;
+			Win.document.write("Призвіще"+" "+elem+"<br>");
+			var k = parseInt(document.getElementById("math").value)+parseInt(document.getElementById("mova").value);
+			Win.document.write("Сума oцінок "+k);
+		}
+		function someFunc2(){
+			Win.close();
+		}
+	</script>
+</body>
+</html>
