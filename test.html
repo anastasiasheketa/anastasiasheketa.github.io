@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Тести з української літератури</h1>
+<form name="test">
+<input type="button" value="Перевірити" onclick="check()">
+<span id="ans"></span><p>
+<p>Спарвжнє призвіще І. Багряного?</p>
+<input type="text" name="vopr1"></p>
+<p>Хто був зачинатилем нової української літератури?</p>
+<input type="text" name="vopr2"></p>
+<p>Вкажіть присвяту твору Т. Шевченка, темою якого є селянське повстання під назвою Колiївщина.</p>
+<input type="radio" name="vopr3">«Гайдамаки»<br> 
+<input type="radio" name="vopr3">«Кавказ»<br> 
+<input type="radio" name="vopr3">«Заповіт»<br> 
+<input type="radio" name="vopr3">«І мертвим, і живим, і ненарожденним…»<br>
+<p>Поема, темою якої є нещасливе життя жінки-покритки, має послання:</p>
+  <input type="radio" name="vopr4">Якову де Бальмену<br> 
+  <input type="radio" name="vopr4">Кобилянському<br> 
+  <input type="radio" name="vopr4">Жуковському<br>
+  <input type="radio" name="vopr4">Григоровичу<br>
+<p>Що написала Л. Українка</p>
+<input type="checkbox" name="vopr5">Contra spem spero<br>
+<input type="checkbox" name="vopr5">Лісова пісня<br>
+<input type="checkbox" name="vopr5">Два кольори<br>
+<p>Шевченко написав....</p>
+<input type="checkbox" name="vopr6">Кавказ<br>
+<input type="checkbox" name="vopr6">Сон<br>
+<input type="checkbox" name="vopr6">Два кольори<br>
+<p>Віршем є твір</p>
+<select name="vopr7"> 
+<option value="1">«Лісова пісня» Лесі Українки</option><p>
+<option value="2">«Кавказ» Т. Шевченка</option><p>
+<option value="3">«Маруся Чурай» Ліни Костенко</option><p>
+<option value="4">«Балада про соняшник» І. Драча</option><p>
+</select>
+<p>Золотий Брід згадується у творі</p>
+<select name="vopr8"> 
+<option value="1">«Засвіт встали козаченьки»</option><p>
+<option value="2">«Ой Морозе, Морозенку»</option><p>
+<option value="3"> «Чи не той то хміль...»</option><p>
+<option value="4">«Маруся Богуславка»</option><p>
+<option value="5">«Віють вітри, віють буйні...»</option><p>
+</select>
+</form>
+	<script type="text/javascript">
+		function check() {
+			var i=0;
+			if(document.test.vopr1.value=="Лозов'ягін") i++;
+			if(document.test.vopr2.value=="Іван Котляревський") i++;
+			if(document.test.vopr3[0].checked) i++;
+			if(document.test.vopr4[3].checked) i++;
+			if(!document.test.vopr5[2].checked && document.test.vopr5[0].checked && document.test.vopr5[1].checked) i++;
+			if(!document.test.vopr6[2].checked && document.test.vopr6[0].checked && document.test.vopr6[1].checked) i++;
+			if(document.test.vopr7.value=="4") i++;
+			if(document.test.vopr8.value=="2") i++;
+			if (i>6) {document.getElementById("ans").innerHTML="<font color='green'> Ваша оцінка "+i+"</font>"} 
+				else  {document.getElementById("ans").innerHTML="<font color='red'> Ваша оцінка "+i+"</font>"};};
+		</script>
+</body>
+</html>
